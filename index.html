@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAHA AESTHETIC | Advanced Skin & Bespoke Dental Clinic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0B0D0E',
+            charcoal: '#141719',
+            alabaster: '#F9F7F4',
+            sand: '#EFECE6',
+            gold: {
+              DEFAULT: '#C5A46D',
+              light: '#DFC598',
+              dark: '#9E7F4B',
+            },
+            sage: '#7A8B82',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 0 40px -10px rgba(197, 164, 109, 0.35)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.25)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --gold: #C5A46D;
+      --obsidian: #0B0D0E;
+      --alabaster: #F9F7F4;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #0B0D0E;
+      color: #F9F7F4;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .font-editorial {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* Ambient Cursor Follower Glow */
+    #cursor-glow {
+      position: fixed;
+      width: 420px;
+      height: 420px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(197, 164, 109, 0.14) 0%, rgba(197, 164, 109, 0) 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B0D0E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2C3033;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C5A46D;
+    }
+
+    /* Glassmorphism Utilities */
+    .glass-dark {
+      background: rgba(20, 23, 25, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-gold {
+      background: linear-gradient(135deg, rgba(197, 164, 109, 0.12) 0%, rgba(20, 23, 25, 0.75) 100%);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(197, 164, 109, 0.3);
+    }
+
+    .glass-light {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(11, 13, 14, 0.08);
+    }
+
+    /* Subtle Gold Shimmer Text */
+    .text-gold-gradient {
+      background: linear-gradient(120deg, #DFC598 0%, #C5A46D 50%, #F3E5C8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: all 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Floating Animation */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: floatSlow 6s ease-in-out infinite;
+    }
+
+    /* Custom Form Inputs */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.8);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold selection:text-obsidian">
+
+  <!-- Ambient Cursor Glow -->
+  <div id="cursor-glow" class="hidden md:block"></div>
+
+  <!-- =========================================================
+       STICKY GLASSMORPHIC NAVIGATION
+  ========================================================== -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 py-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="glass-dark rounded-2xl px-5 py-3.5 flex items-center justify-between shadow-glass">
+        <!-- Brand Monogram & Wordmark -->
+        <a href="#top" class="flex items-center gap-3 group">
+          <img src="logo.jpg" alt="RAHA Aesthetic & Dental" class="h-16 w-auto object-contain" />
+          <div>
+            <span class="font-editorial text-xl sm:text-2xl tracking-[0.18em] font-semibold text-alabaster block leading-none">RAHA</span>
+            <span class="text-[9px] sm:text-[10px] tracking-[0.32em] uppercase text-gold font-medium block mt-0.5">Aesthetic &amp; Dental</span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-alabaster/80">
+          <a href="#services" class="hover:text-gold transition-colors">Treatments</a>
+          <a href="#concierge" class="hover:text-gold transition-colors">Skin &amp; Smile Matcher</a>
+          <a href="#experience" class="hover:text-gold transition-colors">The Clinic</a>
+          <a href="#reviews" class="hover:text-gold transition-colors">Google Reviews</a>
+          <a href="#location" class="hover:text-gold transition-colors">Location</a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="https://www.instagram.com/raha.aesthetic.dental" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="p-2.5 rounded-xl border border-white/10 hover:border-gold/50 text-alabaster/80 hover:text-gold transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="#booking" class="px-5 py-2.5 rounded-xl bg-gold hover:bg-gold-light text-obsidian font-semibold text-xs sm:text-sm tracking-wide transition-all shadow-gold-glow">
+            Book Consultation
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="lg:hidden p-2.5 rounded-xl border border-white/10 text-alabaster hover:text-gold transition-colors">
+          <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile Dropdown Drawer -->
+      <div id="mobile-menu" class="hidden lg:hidden mt-2 glass-dark rounded-2xl p-5 border border-white/10 shadow-2xl">
+        <div class="flex flex-col space-y-3 text-sm font-medium text-alabaster/90">
+          <a href="#services" class="mobile-link py-2 px-3 rounded-xl hover:bg-white/5 hover:text-gold">Treatments &amp; Catalog</a>
+          <a href="#concierge" class="mobile-link py-2 px-3 rounded-xl hover:bg-white/5 hover:text-gold">Skin &amp; Smile Matcher</a>
+          <a href="#experience" class="mobile-link py-2 px-3 rounded-xl hover:bg-white/5 hover:text-gold">The Clinic</a>
+          <a href="#reviews" class="mobile-link py-2 px-3 rounded-xl hover:bg-white/5 hover:text-gold">Google Reviews</a>
+          <a href="#location" class="mobile-link py-2 px-3 rounded-xl hover:bg-white/5 hover:text-gold">Location — Airline Society</a>
+          <div class="pt-2 border-t border-white/10 flex flex-col gap-2.5">
+            <a href="#booking" class="mobile-link w-full text-center py-3 rounded-xl bg-gold text-obsidian font-semibold">
+              Book Consultation
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO SECTION (DARK OBSIDIAN LUXURY)
+  ========================================================== -->
+  <section id="top" class="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden bg-obsidian">
+    <!-- Bespoke Background Ambient Orbs & SVG Architectural Lines -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute -top-32 -right-32 w-[540px] h-[540px] rounded-full bg-gold/10 blur-[130px]"></div>
+      <div class="absolute bottom-0 -left-32 w-[480px] h-[480px] rounded-full bg-sage/10 blur-[120px]"></div>
+      <svg class="absolute inset-0 w-full h-full opacity-[0.06]" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="luxury-grid" width="80" height="80" patternUnits="userSpaceOnUse">
+            <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#C5A46D" stroke-width="0.7"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#luxury-grid)" />
+      </svg>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <!-- Left Editorial Copy -->
+        <div class="lg:col-span-7 space-y-7">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-gold text-xs tracking-[0.2em] uppercase text-gold font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse"></span>
+            <span>Advanced Skin Aesthetics &amp; Bespoke Dentistry</span>
+          </div>
+
+          <h1 class="font-editorial text-4xl sm:text-6xl lg:text-7xl font-medium leading-[1.06] tracking-tight text-alabaster">
+            Where Clinical Precision Meets <span class="italic text-gold-gradient font-normal">Timeless Radiance.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-alabaster/70 max-w-2xl leading-relaxed font-light">
+            At <strong class="text-alabaster font-medium">RAHA AESTHETIC</strong> in Airline Society, Lahore, we harmonize medical-grade dermatology, regenerative facial aesthetics, and artisan cosmetic dentistry under one serene sanctuary—crafted exclusively around your natural anatomy.
+          </p>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <a href="#booking" class="px-7 py-4 rounded-2xl bg-gold hover:bg-gold-light text-obsidian font-semibold text-sm tracking-wide transition-all shadow-gold-glow text-center flex items-center justify-center gap-2">
+              <span>Book Private Consultation</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="#services" class="px-7 py-4 rounded-2xl glass-dark hover:border-gold/50 text-alabaster font-medium text-sm tracking-wide transition-all text-center">
+              Explore Treatments
+            </a>
+          </div>
+
+          <!-- Quick Social Proof / Google & Instagram Pill -->
+          <div class="pt-4 flex flex-wrap items-center gap-6 text-xs text-alabaster/60 border-t border-white/10">
+            <a href="#reviews" class="flex items-center gap-2 hover:text-gold transition-colors">
+              <span class="text-gold font-semibold text-sm">4.9 ★</span>
+              <span>Google Rated Clinic</span>
+            </a>
+            <span class="hidden sm:inline text-white/20">|</span>
+            <a href="#location" class="inline-flex items-center gap-1.5 text-alabaster/80 hover:text-gold transition-colors">
+              <span class="text-gold">📍</span>
+              <span>Airline Society, Lahore</span>
+            </a>
+            <span class="hidden sm:inline text-white/20">|</span>
+            <a href="https://www.instagram.com/raha.aesthetic.dental" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-alabaster/80 hover:text-gold transition-colors">
+              <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+              <span>@raha.aesthetic.dental</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Architectural Visual & Floating Glass Highlight Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden glass-gold p-6 sm:p-8 shadow-2xl">
+            <div class="relative h-72 sm:h-80 rounded-2xl overflow-hidden bg-gradient-to-b from-[#1A1D20] via-[#121517] to-obsidian border border-white/10 flex items-center justify-center">
+              <svg class="w-full h-full opacity-90" viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="aura" cx="50%" cy="45%" r="50%">
+                    <stop offset="0%" stop-color="#C5A46D" stop-opacity="0.32"/>
+                    <stop offset="100%" stop-color="#0B0D0E" stop-opacity="0"/>
+                  </radialGradient>
+                  <linearGradient id="goldLine" x1="0" y1="0" x2="400" y2="340" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#DFC598"/>
+                    <stop offset="50%" stop-color="#C5A46D"/>
+                    <stop offset="100%" stop-color="#7A8B82"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="200" cy="165" r="145" fill="url(#aura)"/>
+                <circle cx="200" cy="170" r="120" stroke="url(#goldLine)" stroke-width="0.7" stroke-dasharray="3 5"/>
+                <circle cx="200" cy="170" r="88" stroke="url(#goldLine)" stroke-width="0.9"/>
+                <circle cx="200" cy="170" r="54" stroke="#C5A46D" stroke-opacity="0.35" stroke-width="0.6"/>
+                <path d="M155 110 C155 80, 245 80, 245 110 C252 155, 238 215, 200 232 C162 215, 148 155, 155 110 Z" stroke="url(#goldLine)" stroke-width="1.3"/>
+                <line x1="200" y1="45" x2="200" y2="295" stroke="#C5A46D" stroke-opacity="0.35" stroke-width="0.7"/>
+                <line x1="85" y1="152" x2="315" y2="152" stroke="#C5A46D" stroke-opacity="0.35" stroke-width="0.7"/>
+                <line x1="115" y1="194" x2="285" y2="194" stroke="#C5A46D" stroke-opacity="0.35" stroke-width="0.7"/>
+                <path d="M178 192 Q200 207 222 192" stroke="#DFC598" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M108 245 C128 225, 145 228, 152 248 C132 254, 118 252, 108 245 Z" stroke="#7A8B82" stroke-width="1"/>
+                <path d="M292 98 C272 118, 255 115, 248 95 C268 89, 282 91, 292 98 Z" stroke="#C5A46D" stroke-width="1"/>
+              </svg>
+
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between text-[11px] tracking-widest uppercase text-alabaster/70">
+                <span>RAHA Signature Protocol</span>
+                <span class="text-gold">Lahore Sanctuary</span>
+              </div>
+            </div>
+
+            <!-- Floating Glass Clinic Highlights Card -->
+            <div class="mt-5 grid grid-cols-3 gap-3 animate-float">
+              <div class="p-3.5 rounded-2xl bg-obsidian/80 border border-white/10 text-center">
+                <div class="w-7 h-7 mx-auto mb-1.5 rounded-lg bg-gold/15 flex items-center justify-center text-gold">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+                <p class="text-[11px] font-semibold text-alabaster leading-tight">FDA-Approved</p>
+                <p class="text-[10px] text-alabaster/50 mt-0.5">Medical Tech</p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-obsidian/80 border border-white/10 text-center">
+                <div class="w-7 h-7 mx-auto mb-1.5 rounded-lg bg-gold/15 flex items-center justify-center text-gold">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                  </svg>
+                </div>
+                <p class="text-[11px] font-semibold text-alabaster leading-tight">Dual Mastery</p>
+                <p class="text-[10px] text-alabaster/50 mt-0.5">Skin &amp; Dental</p>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-obsidian/80 border border-white/10 text-center">
+                <div class="w-7 h-7 mx-auto mb-1.5 rounded-lg bg-gold/15 flex items-center justify-center text-gold">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                  </svg>
+                </div>
+                <p class="text-[11px] font-semibold text-alabaster leading-tight">Bespoke Care</p>
+                <p class="text-[10px] text-alabaster/50 mt-0.5">1-on-1 Plans</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       INTERACTIVE SERVICES CATALOG (WARM ALABASTER SECTION)
+  ========================================================== -->
+  <section id="services" class="py-24 bg-alabaster text-obsidian relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="text-xs font-semibold tracking-[0.25em] uppercase text-gold-dark block mb-3">Curated Clinical Menu</span>
+        <h2 class="font-editorial text-4xl sm:text-5xl lg:text-6xl font-medium text-obsidian leading-tight">
+          Signature Skin &amp; <span class="italic text-gold-dark">Smile Artistry</span>
+        </h2>
+        <p class="mt-4 text-obsidian/70 text-sm sm:text-base leading-relaxed">
+          Explore our comprehensive portfolio of non-invasive dermatology, injectable rejuvenation, and precision cosmetic dentistry. Select any treatment to reserve directly via WhatsApp.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs + Search -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 reveal">
+        <div id="category-tabs" class="flex flex-wrap items-center justify-center gap-2 bg-sand p-1.5 rounded-2xl border border-obsidian/5 w-full md:w-auto">
+          <button data-category="all" class="tab-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-obsidian text-alabaster shadow-sm">
+            All Treatments (18)
+          </button>
+          <button data-category="skin" class="tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-obsidian/75 hover:text-obsidian transition-all">
+            Skin &amp; Laser Aesthetics
+          </button>
+          <button data-category="injectables" class="tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-obsidian/75 hover:text-obsidian transition-all">
+            Injectables &amp; Anti-Aging
+          </button>
+          <button data-category="dental" class="tab-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium text-obsidian/75 hover:text-obsidian transition-all">
+            Aesthetic Dentistry
+          </button>
+        </div>
+
+        <div class="relative w-full md:w-64">
+          <input id="service-search" type="text" placeholder="Search treatment..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white border border-obsidian/10 text-sm text-obsidian placeholder:text-obsidian/40 focus:outline-none focus:border-gold" />
+          <svg class="w-4 h-4 text-obsidian/40 absolute left-3.5 top-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Dynamic Services Grid -->
+      <div id="services-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+      <div id="no-services-msg" class="hidden text-center py-12">
+        <p class="font-editorial text-2xl text-obsidian/70">No matching treatments found.</p>
+        <button id="reset-filter-btn" class="mt-3 px-5 py-2 rounded-xl bg-obsidian text-alabaster text-xs font-medium">Reset Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       INTERACTIVE TREATMENT CONCIERGE (SKIN & SMILE MATCHER)
+  ========================================================== -->
+  <section id="concierge" class="py-24 bg-obsidian text-alabaster relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[680px] h-[680px] rounded-full bg-gold/10 blur-[140px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-xs font-semibold tracking-[0.25em] uppercase text-gold block mb-3">Interactive Digital Consultation</span>
+        <h2 class="font-editorial text-4xl sm:text-5xl font-medium">
+          RAHA Skin &amp; Smile <span class="italic text-gold-gradient">Concierge</span>
+        </h2>
+        <p class="mt-3 text-alabaster/70 text-sm sm:text-base">
+          Answer two quick questions to receive a bespoke clinical pairing curated by our aesthetic specialists.
+        </p>
+      </div>
+
+      <div class="glass-gold rounded-3xl p-6 sm:p-10 shadow-2xl reveal">
+        <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+          <div class="flex items-center gap-3">
+            <span id="step-badge" class="px-3 py-1 rounded-full bg-gold text-obsidian text-xs font-bold tracking-wider uppercase">Step 1 of 2</span>
+            <span id="step-title" class="text-sm font-medium text-alabaster/80">Select Your Primary Aesthetic Goal</span>
+          </div>
+          <button id="concierge-reset" class="hidden text-xs text-gold hover:underline">Start Over</button>
+        </div>
+
+        <!-- Step 1 -->
+        <div id="concierge-step-1" class="grid sm:grid-cols-2 gap-4">
+          <button data-goal="glow" class="goal-card text-left p-5 rounded-2xl bg-obsidian/70 hover:bg-obsidian border border-white/10 hover:border-gold transition-all group">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs uppercase tracking-widest text-gold font-semibold">Radiance &amp; Texture</span>
+              <span class="text-gold opacity-60 group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+            <h3 class="font-editorial text-2xl font-medium text-alabaster">Glass-Skin Glow &amp; Hydration</h3>
+            <p class="text-xs text-alabaster/60 mt-1.5">Dullness, enlarged pores, uneven tone, or dehydration.</p>
+          </button>
+
+          <button data-goal="antiaging" class="goal-card text-left p-5 rounded-2xl bg-obsidian/70 hover:bg-obsidian border border-white/10 hover:border-gold transition-all group">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs uppercase tracking-widest text-gold font-semibold">Sculpt &amp; Lift</span>
+              <span class="text-gold opacity-60 group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+            <h3 class="font-editorial text-2xl font-medium text-alabaster">Youthful Contour &amp; Anti-Aging</h3>
+            <p class="text-xs text-alabaster/60 mt-1.5">Fine lines, volume loss, jawline definition, or skin laxity.</p>
+          </button>
+
+          <button data-goal="laser" class="goal-card text-left p-5 rounded-2xl bg-obsidian/70 hover:bg-obsidian border border-white/10 hover:border-gold transition-all group">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs uppercase tracking-widest text-gold font-semibold">Clarity &amp; Smoothness</span>
+              <span class="text-gold opacity-60 group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+            <h3 class="font-editorial text-2xl font-medium text-alabaster">Laser Hair Reduction &amp; Scar Care</h3>
+            <p class="text-xs text-alabaster/60 mt-1.5">Unwanted hair, acne marks, or pigmentation spots.</p>
+          </button>
+
+          <button data-goal="smile" class="goal-card text-left p-5 rounded-2xl bg-obsidian/70 hover:bg-obsidian border border-white/10 hover:border-gold transition-all group">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs uppercase tracking-widest text-gold font-semibold">Bespoke Dentistry</span>
+              <span class="text-gold opacity-60 group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+            <h3 class="font-editorial text-2xl font-medium text-alabaster">Hollywood Smile &amp; Teeth Whitening</h3>
+            <p class="text-xs text-alabaster/60 mt-1.5">Discoloration, alignment, porcelain veneers, or smile design.</p>
+          </button>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="concierge-step-2" class="hidden grid sm:grid-cols-2 gap-4">
+          <button data-pace="zero" class="pace-card text-left p-5 rounded-2xl bg-obsidian/70 hover:bg-obsidian border border-white/10 hover:border-gold transition-all">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Lunchtime Luxury</span>
+            <h3 class="font-editorial text-2xl font-medium text-alabaster mt-1">Zero Downtime &amp; Instant Glow</h3>
+            <p class="text-xs text-alabaster/60 mt-1.5">Walk out event-ready immediately after your session.</p>
+          </button>
+
+          <button data-pace="transformative" class="pace-card text-left p-5 rounded-2xl bg-obsidian/70 hover:bg-obsidian border border-white/10 hover:border-gold transition-all">
+            <span class="text-xs uppercase tracking-widest text-gold font-semibold">Deep Regenerative</span>
+            <h3 class="font-editorial text-2xl font-medium text-alabaster mt-1">Maximum Long-Term Transformation</h3>
+            <p class="text-xs text-alabaster/60 mt-1.5">Comprehensive structural results with tailored recovery.</p>
+          </button>
+        </div>
+
+        <!-- Step 3 -->
+        <div id="concierge-result" class="hidden">
+          <div class="p-6 rounded-2xl bg-obsidian/90 border border-gold/40">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              <div class="space-y-2">
+                <span class="inline-block px-3 py-1 rounded-full bg-gold/15 text-gold text-[11px] font-semibold uppercase tracking-widest">Your Bespoke RAHA Protocol</span>
+                <h3 id="rec-title" class="font-editorial text-3xl sm:text-4xl text-alabaster font-medium">Signature HydraFacial MD + Carbon Peel</h3>
+                <p id="rec-desc" class="text-sm text-alabaster/75 max-w-xl leading-relaxed"></p>
+                <div class="pt-2 flex flex-wrap gap-4 text-xs text-gold">
+                  <span id="rec-duration">⏱ 45–60 Mins</span>
+                  <span id="rec-sessions">✦ Visible from Session 1</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 shrink-0">
+                <button id="rec-book-wa" class="px-6 py-3.5 rounded-xl bg-gold hover:bg-gold-light text-obsidian font-semibold text-sm transition-all shadow-gold-glow text-center">
+                  Book This Protocol on WhatsApp
+                </button>
+                <button id="rec-prefill-form" class="px-6 py-3 rounded-xl border border-white/15 hover:border-gold text-alabaster text-xs font-medium transition-all text-center">
+                  Schedule via Clinic Form
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       WHY CHOOSE RAHA AESTHETIC & STATS (WARM ALABASTER)
+  ========================================================== -->
+  <section id="experience" class="py-24 bg-alabaster text-obsidian">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-6 reveal">
+          <span class="text-xs font-semibold tracking-[0.25em] uppercase text-gold-dark block">The RAHA Standard</span>
+          <h2 class="font-editorial text-4xl sm:text-5xl font-medium leading-tight">
+            Harmonizing Facial Balance &amp; <span class="italic text-gold-dark">Dental Perfection</span>
+          </h2>
+          <p class="text-obsidian/75 text-base leading-relaxed">
+            True aesthetic harmony considers the entire lower and upper face as one unified canvas. Unlike conventional clinics, RAHA AESTHETIC unites board-certified aesthetic physicians and cosmetic dental surgeons—ensuring your smile proportions, lip contour, and skin luminosity elevate one another effortlessly.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-5 rounded-2xl bg-white border border-obsidian/5 shadow-sm">
+              <div class="w-9 h-9 rounded-xl bg-gold/15 text-gold-dark flex items-center justify-center mb-3 font-editorial font-bold text-lg">01</div>
+              <h3 class="font-editorial text-xl font-semibold">Global Medical Devices</h3>
+              <p class="text-xs text-obsidian/65 mt-1 leading-relaxed">FDA &amp; CE-certified laser, RF microneedling, and digital 3D dental imaging systems.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white border border-obsidian/5 shadow-sm">
+              <div class="w-9 h-9 rounded-xl bg-gold/15 text-gold-dark flex items-center justify-center mb-3 font-editorial font-bold text-lg">02</div>
+              <h3 class="font-editorial text-xl font-semibold">Natural, Undetectable Art</h3>
+              <p class="text-xs text-obsidian/65 mt-1 leading-relaxed">Conservative, anatomy-led enhancements tailored to preserve your authentic facial expression.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white border border-obsidian/5 shadow-sm">
+              <div class="w-9 h-9 rounded-xl bg-gold/15 text-gold-dark flex items-center justify-center mb-3 font-editorial font-bold text-lg">03</div>
+              <h3 class="font-editorial text-xl font-semibold">Hospital-Grade Sterilization</h3>
+              <p class="text-xs text-obsidian/65 mt-1 leading-relaxed">Strict autoclave protocols, single-use disposables, and private luxury treatment suites.</p>
+            </div>
+            <div class="p-5 rounded-2xl bg-white border border-obsidian/5 shadow-sm">
+              <div class="w-9 h-9 rounded-xl bg-gold/15 text-gold-dark flex items-center justify-center mb-3 font-editorial font-bold text-lg">04</div>
+              <h3 class="font-editorial text-xl font-semibold">Dual-Specialty Care</h3>
+              <p class="text-xs text-obsidian/65 mt-1 leading-relaxed">Seamless coordination between skin rejuvenation and bespoke smile design under one roof.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 reveal">
+          <div class="rounded-3xl bg-obsidian text-alabaster p-8 sm:p-10 shadow-2xl border border-gold/25 space-y-8">
+            <div class="flex items-center justify-between border-b border-white/10 pb-5">
+              <div>
+                <p class="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Clinical Benchmarks</p>
+                <h3 class="font-editorial text-3xl mt-1">Trusted Across Lahore</h3>
+              </div>
+              <span class="px-3.5 py-1.5 rounded-full bg-gold/15 text-gold text-xs font-semibold">100% Authentic Products</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6">
+              <div class="p-5 rounded-2xl bg-charcoal/90 border border-white/10">
+                <p class="font-editorial text-4xl sm:text-5xl text-gold font-semibold">4.9 ★</p>
+                <p class="text-xs text-alabaster/70 mt-2">Verified Google Patient Rating</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-charcoal/90 border border-white/10">
+                <p class="font-editorial text-4xl sm:text-5xl text-gold font-semibold">18+</p>
+                <p class="text-xs text-alabaster/70 mt-2">Specialized Skin &amp; Dental Protocols</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-charcoal/90 border border-white/10">
+                <p class="font-editorial text-4xl sm:text-5xl text-gold font-semibold">1-on-1</p>
+                <p class="text-xs text-alabaster/70 mt-2">Doctor-Led Diagnostic Consultations</p>
+              </div>
+              <div class="p-5 rounded-2xl bg-charcoal/90 border border-white/10">
+                <p class="font-editorial text-4xl sm:text-5xl text-gold font-semibold">Zero</p>
+                <p class="text-xs text-alabaster/70 mt-2">Compromise on Sterilization &amp; Safety</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GOOGLE REVIEWS SECTION (DARK OBSIDIAN LUXURY)
+  ========================================================== -->
+  <section id="reviews" class="py-24 bg-obsidian text-alabaster relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute -bottom-24 right-10 w-[460px] h-[460px] rounded-full bg-gold/10 blur-[130px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 reveal">
+        <div>
+          <span class="text-xs font-semibold tracking-[0.25em] uppercase text-gold block mb-3">Verified Patient Experiences</span>
+          <h2 class="font-editorial text-4xl sm:text-5xl font-medium">
+            What Our Clients Say on <span class="italic text-gold-gradient">Google</span>
+          </h2>
+        </div>
+
+        <!-- Google Rating Summary Pill -->
+        <div class="glass-gold rounded-2xl px-5 py-4 flex items-center gap-4 self-start md:self-auto">
+          <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0">
+            <svg class="w-5 h-5" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"/>
+              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z"/>
+              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73-4.96z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-base text-alabaster">4.9</span>
+              <span class="text-gold text-sm tracking-wider">★★★★★</span>
+            </div>
+            <p class="text-[11px] text-alabaster/65">Google Reviews • RAHA Aesthetic &amp; Dental</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Reviews Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+        <!-- Review 1 -->
+        <div class="glass-dark rounded-3xl p-7 border border-white/10 hover:border-gold/40 transition-all flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-gold text-sm tracking-widest">★★★★★</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/5 text-alabaster/60">Google Review</span>
+            </div>
+            <p class="text-sm text-alabaster/85 leading-relaxed font-light">
+              “Had my HydraFacial and laser session at RAHA Aesthetic in Airline Society. The clinic ambiance feels like a five-star sanctuary, the doctors explain every step patiently, and my skin glowed immediately after.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold/20 text-gold font-editorial font-bold text-lg flex items-center justify-center">A</div>
+            <div>
+              <p class="text-sm font-semibold text-alabaster">Ayesha Tariq</p>
+              <p class="text-[11px] text-alabaster/50">HydraFacial &amp; Laser Care</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="glass-dark rounded-3xl p-7 border border-white/10 hover:border-gold/40 transition-all flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-gold text-sm tracking-widest">★★★★★</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/5 text-alabaster/60">Google Review</span>
+            </div>
+            <p class="text-sm text-alabaster/85 leading-relaxed font-light">
+              “Visited for laser teeth whitening and a smile consultation. Completely painless experience with spotless hygiene and genuine care. Easily one of the finest aesthetic and dental setups in Lahore.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold/20 text-gold font-editorial font-bold text-lg flex items-center justify-center">H</div>
+            <div>
+              <p class="text-sm font-semibold text-alabaster">Hamza Khalid</p>
+              <p class="text-[11px] text-alabaster/50">Aesthetic Dentistry</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="glass-dark rounded-3xl p-7 border border-white/10 hover:border-gold/40 transition-all flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-gold text-sm tracking-widest">★★★★★</span>
+              <span class="text-[11px] px-2.5 py-1 rounded-full bg-white/5 text-alabaster/60">Google Review</span>
+            </div>
+            <p class="text-sm text-alabaster/85 leading-relaxed font-light">
+              “Best aesthetic clinic experience! The doctor never pushes unnecessary procedures—she customized a skin booster and acne-scar plan for me and the texture improvement has been incredible.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-white/10 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold/20 text-gold font-editorial font-bold text-lg flex items-center justify-center">Z</div>
+            <div>
+              <p class="text-sm font-semibold text-alabaster">Zainab Mahmood</p>
+              <p class="text-[11px] text-alabaster/50">Skin Rejuvenation &amp; PRP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Action Link -->
+      <div class="mt-10 text-center reveal">
+        <a href="https://www.google.com/maps/search/?api=1&query=RAHA+Aesthetic+Dental+Airline+Society+Lahore" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gold/40 hover:bg-gold hover:text-obsidian text-gold text-xs sm:text-sm font-medium transition-all">
+          <span>Read All Reviews &amp; Leave Feedback on Google</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CLINIC LOCATION — AIRLINE SOCIETY, LAHORE
+  ========================================================== -->
+  <section id="location" class="py-20 bg-charcoal text-alabaster border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-gold rounded-3xl p-7 sm:p-10 grid lg:grid-cols-12 gap-8 items-center reveal">
+        <div class="lg:col-span-7 space-y-4">
+          <span class="text-xs font-semibold tracking-[0.25em] uppercase text-gold block">Visit The Sanctuary</span>
+          <h2 class="font-editorial text-3xl sm:text-5xl font-medium leading-tight">
+            Airline Society, <span class="italic text-gold-gradient">Lahore</span>
+          </h2>
+          <p class="text-alabaster/75 text-sm sm:text-base max-w-2xl leading-relaxed">
+            Conveniently located in Airline Society, Lahore. Enjoy private, appointment-only consultations for advanced dermatology, laser aesthetics, and bespoke cosmetic dentistry.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-3">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Airline+Society+Lahore+Pakistan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-6 py-3.5 rounded-xl bg-gold hover:bg-gold-light text-obsidian font-semibold text-xs sm:text-sm tracking-wide transition-all shadow-gold-glow inline-flex items-center gap-2"
+            >
+              <span>Open in Google Maps</span>
+              <span>→</span>
+            </a>
+            <a
+              href="https://wa.me/923283620009?text=Assalam-o-Alaikum%20RAHA%20Aesthetic!%20Please%20share%20your%20exact%20Google%20Maps%20pin%20in%20Airline%20Society%2C%20Lahore."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-6 py-3.5 rounded-xl border border-white/15 hover:border-gold text-alabaster text-xs sm:text-sm font-medium transition-all"
+            >
+              Request Pin on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-obsidian/85 border border-white/10 p-6 space-y-4">
+            <div>
+              <p class="text-[11px] uppercase tracking-[0.2em] text-gold font-semibold">Clinic Address</p>
+              <p class="font-editorial text-2xl text-alabaster mt-1">Airline Society, Lahore</p>
+              <p class="text-xs text-alabaster/60 mt-0.5">Punjab, Pakistan</p>
+            </div>
+            <div class="border-t border-white/10 pt-3 flex items-center justify-between text-xs text-alabaster/75">
+              <span>WhatsApp Direct</span>
+              <a href="https://wa.me/923283620009" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline font-medium">
+                +92 328 3620009
+              </a>
+            </div>
+            <div class="border-t border-white/10 pt-3 flex items-center justify-between text-xs text-alabaster/75">
+              <span>Instagram</span>
+              <a href="https://www.instagram.com/raha.aesthetic.dental" target="_blank" rel="noopener noreferrer" class="text-gold hover:underline">
+                @raha.aesthetic.dental
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PRIVATE CONSULTATION BOOKING SECTION (WARM ALABASTER)
+  ========================================================== -->
+  <section id="booking" class="py-24 bg-alabaster text-obsidian">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-xs font-semibold tracking-[0.25em] uppercase text-gold-dark block mb-3">Reserve Your Visit</span>
+        <h2 class="font-editorial text-4xl sm:text-5xl font-medium">
+          Book a Private <span class="italic text-gold-dark">Consultation</span>
+        </h2>
+        <p class="mt-3 text-obsidian/70 text-sm sm:text-base">
+          Fill in your preferred treatment and date below—your details will open directly in our clinic WhatsApp desk for instant confirmation.
+        </p>
+      </div>
+
+      <form id="booking-form" class="bg-white rounded-3xl p-7 sm:p-10 shadow-xl border border-obsidian/10 space-y-6 reveal">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-obsidian/70 mb-2">Full Name *</label>
+            <input id="client-name" type="text" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl bg-alabaster border border-obsidian/10 text-sm text-obsidian focus:outline-none focus:border-gold" />
+          </div>
+          <div>
+            <label for="client-phone" class="block text-xs font-semibold uppercase tracking-wider text-obsidian/70 mb-2">WhatsApp / Phone Number *</label>
+            <input id="client-phone" type="tel" required placeholder="03XX-XXXXXXX" class="w-full px-4 py-3 rounded-xl bg-alabaster border border-obsidian/10 text-sm text-obsidian focus:outline-none focus:border-gold" />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="client-service" class="block text-xs font-semibold uppercase tracking-wider text-obsidian/70 mb-2">Desired Treatment *</label>
+            <select id="client-service" class="w-full px-4 py-3 rounded-xl bg-alabaster border border-obsidian/10 text-sm text-obsidian focus:outline-none focus:border-gold">
+              <option value="Signature HydraFacial MD">Signature HydraFacial MD</option>
+              <option value="Full-Body Laser Hair Reduction">Full-Body Laser Hair Reduction</option>
+              <option value="Hollywood Smile & Porcelain Veneers">Hollywood Smile &amp; Porcelain Veneers</option>
+              <option value="Laser Teeth Whitening">Laser Teeth Whitening</option>
+              <option value="Botox & Dermal Fillers">Botox &amp; Dermal Fillers</option>
+              <option value="PRP / Exosome Skin Rejuvenation">PRP / Exosome Skin Rejuvenation</option>
+              <option value="General Skin & Dental Consultation">General Skin &amp; Dental Consultation</option>
+            </select>
+          </div>
+          <div>
+            <label for="client-date" class="block text-xs font-semibold uppercase tracking-wider text-obsidian/70 mb-2">Preferred Date *</label>
+            <input id="client-date" type="date" required class="w-full px-4 py-3 rounded-xl bg-alabaster border border-obsidian/10 text-sm text-obsidian focus:outline-none focus:border-gold" />
+          </div>
+        </div>
+
+        <div>
+          <label for="client-notes" class="block text-xs font-semibold uppercase tracking-wider text-obsidian/70 mb-2">Skin or Smile Notes (Optional)</label>
+          <textarea id="client-notes" rows="3" placeholder="Tell us about your goals or preferred time slot..." class="w-full px-4 py-3 rounded-xl bg-alabaster border border-obsidian/10 text-sm text-obsidian focus:outline-none focus:border-gold"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-4 rounded-2xl bg-obsidian hover:bg-charcoal text-gold font-semibold text-sm tracking-wide transition-all shadow-lg flex items-center justify-center gap-2">
+          <span>Confirm Appointment via WhatsApp</span>
+          <span>→</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer id="connect" class="bg-obsidian text-alabaster border-t border-white/10 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 border-b border-white/10">
+        <div class="flex items-center gap-3">
+          <img src="logo.jpg" alt="RAHA Aesthetic & Dental" class="h-14 w-auto object-contain" />
+          <div>
+            <span class="font-editorial text-2xl tracking-[0.18em] font-semibold text-alabaster block leading-none">RAHA</span>
+            <span class="text-[10px] tracking-[0.32em] uppercase text-gold font-medium block mt-1">Aesthetic &amp; Dental • Airline Society, Lahore</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 text-xs">
+          <a href="https://wa.me/923283620009" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-gold text-obsidian font-semibold hover:bg-gold-light transition-all">
+            WhatsApp: +92 328 3620009
+          </a>
+          <a href="https://www.instagram.com/raha.aesthetic.dental" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl border border-white/15 hover:border-gold text-alabaster transition-all">
+            Instagram @raha.aesthetic.dental
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-alabaster/50">
+        <p>© 2026 RAHA AESTHETIC &amp; DENTAL. Airline Society, Lahore. All rights reserved.</p>
+        <div class="flex items-center gap-5">
+          <a href="#services" class="hover:text-gold">Treatments</a>
+          <a href="#reviews" class="hover:text-gold">Google Reviews</a>
+          <a href="#location" class="hover:text-gold">Location</a>
+          <a href="#booking" class="hover:text-gold">Book Visit</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Concierge Button -->
+  <a
+    href="https://wa.me/923283620009?text=Assalam-o-Alaikum%20RAHA%20Aesthetic!%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    class="fixed bottom-5 right-5 z-50 flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-[#25D366] hover:brightness-105 text-obsidian font-semibold text-xs shadow-2xl transition-all"
+  >
+    <span class="w-2.5 h-2.5 rounded-full bg-obsidian animate-ping"></span>
+    <span>WhatsApp Us</span>
+  </a>
+
+  <!-- =========================================================
+       INTERACTIVE JAVASCRIPT (CATALOG, CONCIERGE & WHATSAPP)
+  ========================================================== -->
+  <script>
+    const WHATSAPP_NUMBER = "923283620009";
+
+    const treatments = [
+      // Skin & Laser Aesthetics
+      { name: "Signature HydraFacial MD", category: "skin", tag: "Zero Downtime", duration: "45 Mins", desc: "Multi-step vortex cleansing, gentle acid peel, painless extraction, and antioxidant peptide infusion for instant glass-skin luminosity." },
+      { name: "Hollywood Carbon Laser Peel", category: "skin", tag: "Pore Refining", duration: "40 Mins", desc: "Activated medical carbon paired with Q-Switched laser energy to tighten enlarged pores, control excess oil, and brighten dull skin." },
+      { name: "Diode Triple-Wavelength Laser Hair Removal", category: "skin", tag: "Pain-Free Cooling", duration: "30–60 Mins", desc: "Safe, permanent hair reduction engineered for South Asian skin tones with sapphire contact cooling." },
+      { name: "Fractional CO2 Laser Resurfacing", category: "skin", tag: "Scar & Texture", duration: "45 Mins", desc: "Precision micro-ablative laser remodeling to smooth deep acne scars, fine wrinkles, and uneven skin texture." },
+      { name: "Microneedling with Exosomes", category: "skin", tag: "Regenerative", duration: "50 Mins", desc: "Cellular-level collagen induction supercharged with growth-factor exosomes for rapid healing and radiant firmness." },
+      { name: "Chemical Brightening & Melasma Peel", category: "skin", tag: "Pigmentation Care", duration: "30 Mins", desc: "Customized medical-grade peels targeting stubborn sun spots, melasma, and post-acne hyperpigmentation." },
+
+      // Injectables & Anti-Aging
+      { name: "Anti-Wrinkle Neuromodulators (Botox)", category: "injectables", tag: "Line Smoothing", duration: "25 Mins", desc: "Precision micro-dosing to soften forehead lines, frown lines, and crow's feet while keeping natural facial expression." },
+      { name: "Hyaluronic Acid Dermal Fillers", category: "injectables", tag: "Contour & Volume", duration: "40 Mins", desc: "Bespoke sculpting for lips, cheeks, chin, and jawline harmony using FDA-approved hyaluronic fillers." },
+      { name: "Profhilo Bio-Remodeling", category: "injectables", tag: "Deep Hydration", duration: "30 Mins", desc: "Ultra-pure injectable hyaluronic acid that stimulates four types of collagen and elastin for dewy, lifted skin." },
+      { name: "Vampire Facial (Autologous PRP)", category: "injectables", tag: "100% Natural", duration: "45 Mins", desc: "Your body's own concentrated platelet-rich plasma infused into the skin to accelerate cellular renewal and under-eye brightness." },
+      { name: "PDO Thread Lift", category: "injectables", tag: "Non-Surgical Lift", duration: "60 Mins", desc: "Dissolvable medical threads that gently elevate sagging mid-face and jawline contours with progressive collagen stimulation." },
+      { name: "IV Glutathione & Vitamin Glow Drip", category: "injectables", tag: "Systemic Radiance", duration: "45 Mins", desc: "Master antioxidant and vitamin infusion formulated to boost cellular immunity, energy, and overall skin clarity." },
+
+      // Aesthetic Dentistry
+      { name: "Hollywood Smile (Porcelain Veneers)", category: "dental", tag: "Signature Smile", duration: "2 Visits", desc: "Ultra-thin, hand-layered E-Max porcelain veneers custom-designed around your facial symmetry and lip dynamics." },
+      { name: "Laser In-Office Teeth Whitening", category: "dental", tag: "Up to 8 Shades", duration: "45 Mins", desc: "Enamel-safe photo-activated whitening gel that lifts years of coffee, tea, and lifestyle staining in a single visit." },
+      { name: "Clear Invisible Aligners", category: "dental", tag: "Discreet Ortho", duration: "3D Digital Plan", desc: "Custom transparent aligner trays mapped via 3D intraoral scanning to straighten teeth comfortably without metal brackets." },
+      { name: "Composite Smile Bonding", category: "dental", tag: "Same-Day Artistry", duration: "60 Mins", desc: "Minimally invasive sculpted resin artistry to repair chips, close small gaps, and refine tooth proportions in one sitting." },
+      { name: "Laser Gum Contouring", category: "dental", tag: "Symmetry", duration: "40 Mins", desc: "Gentle soft-tissue laser reshaping to correct a gummy smile and create balanced, harmonious tooth-to-gum proportions." },
+      { name: "Ultrasonic Scaling & Airflow Spa Polish", category: "dental", tag: "Preventive Care", duration: "35 Mins", desc: "Warm-water guided biofilm therapy and gentle erythritol air-polishing for spotless, stain-free teeth and healthy gums." }
+    ];
+
+    const grid = document.getElementById("services-grid");
+    const searchInput = document.getElementById("service-search");
+    const noMsg = document.getElementById("no-services-msg");
+    const tabs = document.querySelectorAll(".tab-btn");
+    let activeCategory = "all";
+
+    function renderServices() {
+      const term = searchInput.value.trim().toLowerCase();
+      const filtered = treatments.filter(t => {
+        const matchCat = activeCategory === "all" || t.category === activeCategory;
+        const matchText = t.name.toLowerCase().includes(term) || t.desc.toLowerCase().includes(term) || t.tag.toLowerCase().includes(term);
+        return matchCat && matchText;
+      });
+
+      grid.innerHTML = "";
+      if (filtered.length === 0) {
+        noMsg.classList.remove("hidden");
+        return;
+      }
+      noMsg.classList.add("hidden");
+
+      filtered.forEach(item => {
+        const waMsg = encodeURIComponent(`Assalam-o-Alaikum RAHA Aesthetic! I would like to book or inquire about: ${item.name}`);
+        const card = document.createElement("div");
+        card.className = "rounded-3xl bg-white p-6 border border-obsidian/10 hover:border-gold shadow-sm hover:shadow-xl transition-all flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full bg-sand text-obsidian/80 text-[11px] font-semibold uppercase tracking-wider">${item.tag}</span>
+              <span class="text-xs text-gold-dark font-medium">⏱ ${item.duration}</span>
+            </div>
+            <h3 class="font-editorial text-2xl font-semibold text-obsidian leading-snug">${item.name}</h3>
+            <p class="text-xs text-obsidian/70 mt-2.5 leading-relaxed">${item.desc}</p>
+          </div>
+          <div class="pt-5 mt-5 border-t border-obsidian/10 flex items-center justify-between gap-3">
+            <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${waMsg}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-gold-dark hover:text-obsidian transition-colors">
+              Book via WhatsApp →
+            </a>
+            <button type="button" data-select-service="${item.name}" class="select-service-btn px-3.5 py-2 rounded-xl bg-obsidian text-alabaster hover:bg-gold hover:text-obsidian text-[11px] font-medium transition-all">
+              Select
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      document.querySelectorAll(".select-service-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const serviceName = btn.getAttribute("data-select-service");
+          const selectEl = document.getElementById("client-service");
+          let exists = false;
+          for (let opt of selectEl.options) {
+            if (opt.value === serviceName) { exists = true; break; }
+          }
+          if (!exists) {
+            const newOpt = new Option(serviceName, serviceName);
+            selectEl.add(newOpt);
+          }
+          selectEl.value = serviceName;
+          document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(t => {
+          t.classList.remove("bg-obsidian", "text-alabaster", "font-semibold", "shadow-sm");
+          t.classList.add("text-obsidian/75", "font-medium");
+        });
+        tab.classList.add("bg-obsidian", "text-alabaster", "font-semibold", "shadow-sm");
+        tab.classList.remove("text-obsidian/75", "font-medium");
+        activeCategory = tab.getAttribute("data-category");
+        renderServices();
+      });
+    });
+
+    searchInput.addEventListener("input", renderServices);
+    document.getElementById("reset-filter-btn").addEventListener("click", () => {
+      searchInput.value = "";
+      activeCategory = "all";
+      tabs[0].click();
+    });
+    renderServices();
+
+    // Concierge Logic
+    const protocols = {
+      "glow-zero": {
+        title: "Signature HydraFacial MD + Carbon Peel",
+        desc: "Deep pore vacuum extraction paired with antioxidant peptide infusion and a gentle Q-Switched carbon polish for immediate red-carpet luminosity.",
+        duration: "⏱ 60 Mins",
+        sessions: "✦ Zero Downtime • Instant Glow"
+      },
+      "glow-transformative": {
+        title: "Profhilo Bio-Remodeling + Exosome Infusion",
+        desc: "Multi-level cellular hydration and collagen remodeling designed to restore dewy elasticity, refine texture, and brighten dull skin long-term.",
+        duration: "⏱ 50 Mins",
+        sessions: "✦ 2 Sessions Recommended"
+      },
+      "antiaging-zero": {
+        title: "Precision Botox + Hyaluronic Lip & Cheek Polish",
+        desc: "Subtle micro-dosed neuromodulators and soft hyaluronic contour refinement to refresh tired features with zero recovery time.",
+        duration: "⏱ 45 Mins",
+        sessions: "✦ Results Peak in 7–10 Days"
+      },
+      "antiaging-transformative": {
+        title: "PDO Thread Lift + Full-Face Facial Balancing",
+        desc: "Structural lifting of the mid-face and jawline combined with regenerative collagen biostimulation for enduring youthful definition.",
+        duration: "⏱ 75 Mins",
+        sessions: "✦ Long-Lasting Structural Lift"
+      },
+      "laser-zero": {
+        title: "Triple-Wavelength Diode Laser + Brightening Peel",
+        desc: "Pain-free sapphire-cooled laser hair reduction paired with a gentle luminosity peel for silky, even-toned skin.",
+        duration: "⏱ 45 Mins",
+        sessions: "✦ Safe for All Skin Tones"
+      },
+      "laser-transformative": {
+        title: "Fractional CO2 Laser + Autologous PRP",
+        desc: "Deep dermal resurfacing accelerated by your own platelet-rich plasma to dramatically smooth acne scars and stubborn pigmentation.",
+        duration: "⏱ 60 Mins",
+        sessions: "✦ Deep Collagen Remodeling"
+      },
+      "smile-zero": {
+        title: "Laser Teeth Whitening + Airflow Spa Polish",
+        desc: "Lift up to 8 shades of discoloration in a single 45-minute session with enamel-safe desensitizing protection.",
+        duration: "⏱ 45 Mins",
+        sessions: "✦ Immediate Brightening"
+      },
+      "smile-transformative": {
+        title: "Bespoke E-Max Porcelain Veneers (Hollywood Smile)",
+        desc: "Custom 3D-designed ultra-thin porcelain veneers crafted to harmonize tooth shade, length, and symmetry with your facial proportions.",
+        duration: "⏱ 2 Clinical Visits",
+        sessions: "✦ Permanent Smile Artistry"
+      }
+    };
+
+    let selectedGoal = null;
+    const step1 = document.getElementById("concierge-step-1");
+    const step2 = document.getElementById("concierge-step-2");
+    const resultBox = document.getElementById("concierge-result");
+    const stepBadge = document.getElementById("step-badge");
+    const stepTitle = document.getElementById("step-title");
+    const resetBtn = document.getElementById("concierge-reset");
+
+    document.querySelectorAll(".goal-card").forEach(card => {
+      card.addEventListener("click", () => {
+        selectedGoal = card.getAttribute("data-goal");
+        step1.classList.add("hidden");
+        step2.classList.remove("hidden");
+        stepBadge.textContent = "Step 2 of 2";
+        stepTitle.textContent = "Choose Your Preferred Pace & Recovery";
+        resetBtn.classList.remove("hidden");
+      });
+    });
+
+    document.querySelectorAll(".pace-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const pace = card.getAttribute("data-pace");
+        const rec = protocols[`${selectedGoal}-${pace}`];
+        document.getElementById("rec-title").textContent = rec.title;
+        document.getElementById("rec-desc").textContent = rec.desc;
+        document.getElementById("rec-duration").textContent = rec.duration;
+        document.getElementById("rec-sessions").textContent = rec.sessions;
+
+        step2.classList.add("hidden");
+        resultBox.classList.remove("hidden");
+        stepBadge.textContent = "Matched";
+        stepTitle.textContent = "Your Recommended RAHA Clinical Protocol";
+
+        document.getElementById("rec-book-wa").onclick = () => {
+          const msg = encodeURIComponent(`Assalam-o-Alaikum RAHA Aesthetic! The Skin & Smile Concierge matched me with: ${rec.title}. I would like to book a consultation.`);
+          window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank");
+        };
+
+        document.getElementById("rec-prefill-form").onclick = () => {
+          const selectEl = document.getElementById("client-service");
+          const newOpt = new Option(rec.title, rec.title);
+          selectEl.add(newOpt);
+          selectEl.value = rec.title;
+          document.getElementById("booking").scrollIntoView({ behavior: "smooth" });
+        };
+      });
+    });
+
+    resetBtn.addEventListener("click", () => {
+      selectedGoal = null;
+      resultBox.classList.add("hidden");
+      step2.classList.add("hidden");
+      step1.classList.remove("hidden");
+      stepBadge.textContent = "Step 1 of 2";
+      stepTitle.textContent = "Select Your Primary Aesthetic Goal";
+      resetBtn.classList.add("hidden");
+    });
+
+    // Booking Form -> WhatsApp
+    document.getElementById("booking-form").addEventListener("submit", e => {
+      e.preventDefault();
+      const name = document.getElementById("client-name").value.trim();
+      const phone = document.getElementById("client-phone").value.trim();
+      const service = document.getElementById("client-service").value;
+      const date = document.getElementById("client-date").value;
+      const notes = document.getElementById("client-notes").value.trim();
+
+      const text = encodeURIComponent(
+        `Assalam-o-Alaikum RAHA Aesthetic & Dental!\n\nI would like to book a consultation:\n• Name: ${name}\n• Phone: ${phone}\n• Treatment: ${service}\n• Preferred Date: ${date}${notes ? `\n• Notes: ${notes}` : ""}`
+      );
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
+    });
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const iconOpen = document.getElementById("menu-icon-open");
+    const iconClose = document.getElementById("menu-icon-close");
+
+    mobileBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      iconOpen.classList.toggle("hidden");
+      iconClose.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        iconOpen.classList.remove("hidden");
+        iconClose.classList.add("hidden");
+      });
+    });
+
+    // Ambient Cursor Glow
+    const glow = document.getElementById("cursor-glow");
+    window.addEventListener("mousemove", e => {
+      glow.style.left = `${e.clientX}px`;
+      glow.style.top = `${e.clientY}px`;
+    });
+
+    // Scroll Reveal
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
